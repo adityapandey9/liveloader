@@ -1,0 +1,753 @@
+<ActivityTable.activityBy>: uid .
+<ActivityTable.activityType>: string @index(hash) .
+<ActivityTable.answer>: uid .
+<ActivityTable.comment>: uid .
+<ActivityTable.course>: uid .
+<ActivityTable.createdAt>: float .
+<ActivityTable.module>: uid .
+<ActivityTable.question>: uid .
+<ActivityTable.rank>: string .
+<ActivityTable.section>: uid .
+<ActivityTable.user>: uid .
+<ActivityTable.userId>: string @index(hash) .
+<AnswerResponse.data>: [uid] .
+<AnswerResponse.pageInfo>: uid .
+<AnswerTable.answerTag>: string @index(hash) .
+<AnswerTable.answerTime>: float @index(float) .
+<AnswerTable.dbId>: string @index(hash) .
+<AnswerTable.editorAnswer>: string .
+<AnswerTable.imgLink>: [string] .
+<AnswerTable.isDeleted>: bool @index(bool) .
+<AnswerTable.isFavourite>: bool @index(bool) .
+<AnswerTable.isModeration>: bool @index(bool) .
+<AnswerTable.isReported>: bool @index(bool) .
+<AnswerTable.isVerified>: bool @index(bool) .
+<AnswerTable.moderation>: [uid] .
+<AnswerTable.points>: [uid] .
+<AnswerTable.question>: uid .
+<AnswerTable.questionId>: string @index(hash) .
+<AnswerTable.user>: uid .
+<AnswerTable.userAnswer>: string .
+<AnswerTable.userId>: string @index(hash) .
+<AnswerTable.userVotes>: [uid] .
+<AnswerTable.userVotesIds>: [string] .
+<AnswerTable.votes>: int .
+<AnswersResponse.questionId>: string .
+<AnswersResponse.response>: string .
+<AnswersResponse.userId>: string .
+<BattleHistoryResponse.data>: [uid] .
+<BattleHistoryResponse.pageInfo>: uid .
+<BattleHistoryTable.challengerId>: string .
+<BattleHistoryTable.challengerResponse>: int .
+<BattleHistoryTable.date>: float .
+<BattleHistoryTable.dbId>: string @index(hash) .
+<BattleHistoryTable.fighters>: [uid] .
+<BattleHistoryTable.fightersId>: [string] @index(term) .
+<BattleHistoryTable.opponentId>: string .
+<BattleHistoryTable.opponentResponse>: int .
+<BattleHistoryTable.point>: int @index(int) .
+<BattleHistoryTable.questions>: [uid] .
+<BattleHistoryTable.questionsId>: [string] .
+<BattleHistoryTable.result>: string .
+<BattleHistoryTable.takePart>: [string] .
+<BattleHistoryTable.usersResponse>: [uid] .
+<CourseCertificateTable.course>: uid .
+<CourseCertificateTable.courseId>: string @index(hash) .
+<CourseCertificateTable.createdAt>: float .
+<CourseCertificateTable.marks>: int .
+<CourseCertificateTable.user>: uid .
+<CourseCertificateTable.userId>: string @index(hash) .
+<CourseProgress.course>: uid .
+<CourseProgress.courseId>: string @index(hash) .
+<CourseProgress.createdAt>: float .
+<CourseProgress.status>: string @index(hash) .
+<CourseProgress.statusVal>: int .
+<CourseProgress.user>: uid .
+<CourseProgress.userId>: string @index(hash) .
+<CourseTable.bookmarkList>: [uid] .
+<CourseTable.certificate>: [uid] .
+<CourseTable.createdAt>: float .
+<CourseTable.isPublished>: bool @index(bool) .
+<CourseTable.moduleTable>: [uid] .
+<CourseTable.points>: int .
+<CourseTable.progress>: [uid] .
+<CourseTable.reviewId>: string @index(term) .
+<CourseTable.reviewer>: uid .
+<CourseTable.subject>: string @index(term) .
+<CourseTable.title>: string @index(term) .
+<CourseTable.user>: uid .
+<CourseTable.userId>: string @index(term) .
+<ItemTagTable.createdAt>: float .
+<ItemTagTable.tag>: string @index(fulltext, hash) .
+<ItemTagTable.type>: string @index(hash) .
+<LeaderBoardResponse.daily>: [uid] .
+<LeaderBoardResponse.monthly>: [uid] .
+<LeaderBoardResponse.weekly>: [uid] .
+<MessageResponse.data>: [uid] .
+<MessageResponse.pageInfo>: uid .
+<MessageTable.createdAt>: float .
+<MessageTable.createdBy>: uid .
+<MessageTable.dbId>: string @index(hash) .
+<MessageTable.room>: uid .
+<MessageTable.roomId>: string @index(hash) .
+<MessageTable.text>: string .
+<MessageTable.type>: string @index(hash) .
+<MessageTable.updatedAt>: float .
+<MessageTable.userId>: string .
+<Moderation.moderationTask>: string .
+<Moderation.moderationTime>: float @index(float) .
+<Moderation.moderator>: uid .
+<Moderation.moderatorId>: string .
+<ModerationResponse.data>: [uid] .
+<ModerationResponse.pageInfo>: uid .
+<ModuleProgress.createdAt>: float .
+<ModuleProgress.module>: uid .
+<ModuleProgress.moduleId>: string @index(hash) .
+<ModuleProgress.status>: string @index(hash) .
+<ModuleProgress.statusVal>: int .
+<ModuleProgress.user>: uid .
+<ModuleProgress.userId>: string @index(hash) .
+<ModuleTable.course>: uid .
+<ModuleTable.createdAt>: float .
+<ModuleTable.isPublished>: bool @index(bool) .
+<ModuleTable.moduleOrder>: int .
+<ModuleTable.progress>: [uid] .
+<ModuleTable.reviewId>: string @index(term) .
+<ModuleTable.reviewer>: uid .
+<ModuleTable.sectionTopics>: [uid] .
+<ModuleTable.subject>: string @index(term) .
+<ModuleTable.title>: string @index(term) .
+<ModuleTable.user>: uid .
+<ModuleTable.userId>: string @index(term) .
+<NotificationResponse.data>: [uid] .
+<NotificationResponse.pageInfo>: uid .
+<NotificationTable.causer>: uid .
+<NotificationTable.causerId>: string .
+<NotificationTable.createdAt>: float .
+<NotificationTable.dbId>: string @index(hash) .
+<NotificationTable.isSeen>: bool @index(bool) .
+<NotificationTable.label>: string .
+<NotificationTable.storeId>: string @index(hash) .
+<NotificationTable.type>: string @index(hash) .
+<NotificationTable.updatedAt>: float .
+<NotificationTable.userId>: string @index(hash) .
+<QuestionCommentResponse.data>: [uid] .
+<QuestionCommentResponse.pageInfo>: uid .
+<QuestionCommentTable.comment>: string .
+<QuestionCommentTable.dbId>: string @index(hash) .
+<QuestionCommentTable.question>: uid .
+<QuestionCommentTable.questionId>: string @index(hash) .
+<QuestionCommentTable.time>: float .
+<QuestionCommentTable.user>: uid .
+<QuestionCommentTable.userId>: string @index(hash) .
+<QuestionResponse.data>: [uid] .
+<QuestionResponse.pageInfo>: uid .
+<QuestionTable.answersIds>: [string] .
+<QuestionTable.answersList>: [uid] .
+<QuestionTable.commentIds>: [string] .
+<QuestionTable.commentList>: [uid] .
+<QuestionTable.counter>: int @index(int) .
+<QuestionTable.dbId>: string @index(hash) .
+<QuestionTable.editorQuestion>: string .
+<QuestionTable.imgLink>: [string] .
+<QuestionTable.isAnswered2>: bool @index(bool) .
+<QuestionTable.isDeleted>: bool @index(bool) .
+<QuestionTable.isModeration>: bool @index(bool) .
+<QuestionTable.isReported>: bool @index(bool) .
+<QuestionTable.isTopQuestion>: bool @index(bool) .
+<QuestionTable.moderation>: [uid] .
+<QuestionTable.point>: int .
+<QuestionTable.points>: [uid] .
+<QuestionTable.questionId>: string .
+<QuestionTable.questionTag>: string @index(hash) .
+<QuestionTable.questionTime>: float .
+<QuestionTable.tags>: [uid] .
+<QuestionTable.user>: uid .
+<QuestionTable.userId>: string @index(hash) .
+<QuestionTable.userQuestion>: string @index(fulltext) .
+<QuestionTable.voterList>: [uid] .
+<QuestionTable.voterListIds>: [string] .
+<QuestionTable.votes>: int .
+<QuizQuestionTable.category>: string @index(term) .
+<QuizQuestionTable.correctAnswer>: string .
+<QuizQuestionTable.createdBy>: uid .
+<QuizQuestionTable.createdById>: string .
+<QuizQuestionTable.date>: float .
+<QuizQuestionTable.dbId>: string @index(hash) .
+<QuizQuestionTable.difficulty>: string .
+<QuizQuestionTable.incorrectAnswers>: [string] .
+<QuizQuestionTable.isActive>: bool .
+<QuizQuestionTable.question>: string @index(term) .
+<QuizQuestionTable.questionId>: string @index(hash) .
+<QuizQuestionTable.randomVal>: float @index(float) .
+<QuizQuestionTable.reviewedBy>: uid .
+<QuizQuestionTable.reviewedById>: string .
+<QuizQuestionTable.type>: string @index(hash) .
+<QuizQuestionTable.upVoted>: int .
+<RoomResponse.data>: [uid] .
+<RoomResponse.pageInfo>: uid .
+<RoomTable.createdAt>: float .
+<RoomTable.dbId>: string @index(hash) .
+<RoomTable.imageLink>: string .
+<RoomTable.isFixed>: bool @index(bool) .
+<RoomTable.messages>: [uid] .
+<RoomTable.title>: string .
+<RoomTable.updatedAt>: float .
+<RoomTable.userIds>: [string] @index(term) .
+<RoomTable.users>: [uid] .
+<Score.answer>: uid .
+<Score.date>: float @index(float) .
+<Score.fight>: uid .
+<Score.question>: uid .
+<Score.score>: int @index(int) .
+<Score.sectionNotes>: uid .
+<Score.user>: uid .
+<SectionQuestionTable.correctAnswer>: [string] .
+<SectionQuestionTable.createdAt>: float .
+<SectionQuestionTable.options>: [string] .
+<SectionQuestionTable.question>: string @index(term) .
+<SectionQuestionTable.questionType>: string @index(hash) .
+<SectionQuestionTable.sectionTopic>: uid .
+<SectionQuestionTable.user>: uid .
+<SectionQuestionTable.userId>: string @index(term) .
+<SectionTable.bookmarkList>: [uid] .
+<SectionTable.content>: string .
+<SectionTable.createdAt>: float .
+<SectionTable.editorContent>: string .
+<SectionTable.imageLink>: [string] .
+<SectionTable.isPublished>: bool @index(bool) .
+<SectionTable.isUtham>: bool @index(bool) .
+<SectionTable.reviewId>: string @index(term) .
+<SectionTable.reviewer>: uid .
+<SectionTable.sectionQuiz>: [uid] .
+<SectionTable.sectionTopic>: uid .
+<SectionTable.subject>: string @index(term) .
+<SectionTable.tags>: [uid] .
+<SectionTable.title>: string @index(term) .
+<SectionTable.user>: uid .
+<SectionTable.userId>: string @index(term) .
+<SectionTable.views>: int .
+<SectionTable.voterList>: [uid] .
+<SectionTable.votes>: int .
+<SectionTopicProgress.createdAt>: float .
+<SectionTopicProgress.sectionTopic>: uid .
+<SectionTopicProgress.sectionTopicId>: string @index(hash) .
+<SectionTopicProgress.status>: string @index(hash) .
+<SectionTopicProgress.user>: uid .
+<SectionTopicProgress.userId>: string @index(hash) .
+<SectionTopicTable.createdAt>: float .
+<SectionTopicTable.editPermissionTime>: float .
+<SectionTopicTable.isPublished>: bool @index(bool) .
+<SectionTopicTable.isReadyForReview>: bool @index(bool) .
+<SectionTopicTable.isTopNote>: bool @index(bool) .
+<SectionTopicTable.mainSection>: uid .
+<SectionTopicTable.moduleTable>: uid .
+<SectionTopicTable.progress>: [uid] .
+<SectionTopicTable.quizQuestions>: [uid] .
+<SectionTopicTable.reviewId>: string @index(term) .
+<SectionTopicTable.reviewPoints>: string .
+<SectionTopicTable.reviewer>: uid .
+<SectionTopicTable.sectionOrder>: int .
+<SectionTopicTable.sections>: [uid] .
+<SectionTopicTable.subject>: string @index(term) .
+<SectionTopicTable.topic>: string @index(term) .
+<SectionTopicTable.user>: uid .
+<SectionTopicTable.userId>: string @index(term) .
+<TypeResponse.currentPage>: int .
+<TypeResponse.last>: int .
+<TypeResponse.total>: int .
+<UserFollowResponse.data>: [uid] .
+<UserFollowResponse.pageInfo>: uid .
+<UserTable.UserEmail>: string .
+<UserTable._id>: string .
+<UserTable.activityList>: [uid] .
+<UserTable.answerIds>: [string] .
+<UserTable.answers>: int .
+<UserTable.answersList>: [uid] .
+<UserTable.banOrder>: int @index(int) .
+<UserTable.banTime>: float @index(float) .
+<UserTable.bio>: string .
+<UserTable.block>: [uid] .
+<UserTable.bookmarkCourse>: [uid] .
+<UserTable.bookmarkSectionNotes>: [uid] .
+<UserTable.country>: string .
+<UserTable.createdAt>: float .
+<UserTable.dailyPoints>: int .
+<UserTable.dailyPointsDate>: int .
+<UserTable.dbId>: string @index(hash) .
+<UserTable.deviceId>: string @index(term) .
+<UserTable.followers>: int .
+<UserTable.followersIds>: [string] .
+<UserTable.followersList>: [uid] .
+<UserTable.following>: int .
+<UserTable.followingIds>: [string] .
+<UserTable.followingList>: [uid] .
+<UserTable.imageLink>: string .
+<UserTable.isAds>: bool .
+<UserTable.isBan>: bool @index(bool) .
+<UserTable.isChat>: bool @index(bool) .
+<UserTable.isComment>: bool .
+<UserTable.isDeleted>: bool @index(bool) .
+<UserTable.isFake>: bool @index(bool) .
+<UserTable.isModeration>: bool @index(bool) .
+<UserTable.isOnline>: bool .
+<UserTable.isReported>: bool @index(bool) .
+<UserTable.isSeen>: bool @index(bool) .
+<UserTable.lat>: float .
+<UserTable.lon>: float .
+<UserTable.moderation>: [uid] .
+<UserTable.monthPoints>: int .
+<UserTable.monthPointsDate>: int .
+<UserTable.myCertificate>: [uid] .
+<UserTable.myCourse>: [uid] .
+<UserTable.myModules>: [uid] .
+<UserTable.mySectionNotes>: [uid] .
+<UserTable.points>: [uid] .
+<UserTable.priority>: int @index(int) .
+<UserTable.randomVal>: float .
+<UserTable.ranks>: string @index(term) .
+<UserTable.totalPoints>: int .
+<UserTable.updatedAt>: float .
+<UserTable.userEmail>: string @index(hash) @upsert .
+<UserTable.userId>: string @index(term) .
+<UserTable.userName>: string @index(fulltext) .
+<UserTable.weeklyPoints>: int .
+<UserTable.weeklyPointsDate>: int .
+<_id>: string .
+<answerModerated.isModeration>: bool .
+<answers>: int .
+<answersIds>: default .
+<answersList>: default .
+<banOrder>: int .
+<banTime>: int .
+<bio>: string .
+<comment>: string .
+<country>: string .
+<createdAt>: float .
+<date>: float .
+<deviceId>: string .
+<dgraph.drop.op>: string .
+<dgraph.graphql.p_query>: string @index(sha256) .
+<dgraph.graphql.schema>: string .
+<dgraph.graphql.xid>: string @index(exact) @upsert .
+<followers>: int .
+<following>: int .
+<food_name>: string .
+<imageLink>: string .
+<isAds>: bool .
+<isBan>: bool .
+<isChat>: bool .
+<isComment>: bool .
+<isDeleted>: bool .
+<isFake>: bool .
+<isModeration>: bool .
+<isOnline>: bool .
+<isReported>: bool .
+<isSeen>: bool .
+<lat>: int .
+<lon>: int .
+<origin>: [uid] .
+<points>: [uid] .
+<priority>: int .
+<questionModerated.isModeration>: bool .
+<randomVal>: float .
+<ranks>: string .
+<review>: [uid] .
+<score>: int .
+<totalPoints>: int .
+<updatedAt>: float .
+<userEmail>: string .
+<userId>: string .
+<userModerated.isModeration>: bool .
+<userName>: string .
+type <ActivityTable> {
+	ActivityTable.rank
+	ActivityTable.activityBy
+	ActivityTable.activityType
+	ActivityTable.userId
+	ActivityTable.user
+	ActivityTable.answer
+	ActivityTable.section
+	ActivityTable.course
+	ActivityTable.module
+	ActivityTable.question
+	ActivityTable.comment
+	ActivityTable.createdAt
+}
+type <AnswerResponse> {
+	AnswerResponse.pageInfo
+	AnswerResponse.data
+}
+type <AnswerTable> {
+	AnswerTable.dbId
+	AnswerTable.userId
+	AnswerTable.user
+	AnswerTable.questionId
+	AnswerTable.question
+	AnswerTable.answerTag
+	AnswerTable.answerTime
+	AnswerTable.userAnswer
+	AnswerTable.editorAnswer
+	AnswerTable.imgLink
+	AnswerTable.votes
+	AnswerTable.points
+	AnswerTable.userVotesIds
+	AnswerTable.userVotes
+	AnswerTable.moderation
+	AnswerTable.isModeration
+	AnswerTable.isDeleted
+	AnswerTable.isReported
+	AnswerTable.isVerified
+	AnswerTable.isFavourite
+}
+type <AnswersResponse> {
+	AnswersResponse.questionId
+	AnswersResponse.userId
+	AnswersResponse.response
+}
+type <BattleHistoryResponse> {
+	BattleHistoryResponse.pageInfo
+	BattleHistoryResponse.data
+}
+type <BattleHistoryTable> {
+	BattleHistoryTable.dbId
+	BattleHistoryTable.point
+	BattleHistoryTable.fightersId
+	BattleHistoryTable.challengerId
+	BattleHistoryTable.opponentId
+	BattleHistoryTable.fighters
+	BattleHistoryTable.questionsId
+	BattleHistoryTable.questions
+	BattleHistoryTable.result
+	BattleHistoryTable.usersResponse
+	BattleHistoryTable.challengerResponse
+	BattleHistoryTable.opponentResponse
+	BattleHistoryTable.takePart
+	BattleHistoryTable.date
+}
+type <CourseCertificateTable> {
+	CourseCertificateTable.user
+	CourseCertificateTable.course
+	CourseCertificateTable.userId
+	CourseCertificateTable.courseId
+	CourseCertificateTable.marks
+	CourseCertificateTable.createdAt
+}
+type <CourseProgress> {
+	CourseProgress.user
+	CourseProgress.course
+	CourseProgress.status
+	CourseProgress.userId
+	CourseProgress.courseId
+	CourseProgress.statusVal
+	CourseProgress.createdAt
+}
+type <CourseTable> {
+	CourseTable.title
+	CourseTable.moduleTable
+	CourseTable.bookmarkList
+	CourseTable.userId
+	CourseTable.user
+	CourseTable.subject
+	CourseTable.reviewId
+	CourseTable.reviewer
+	CourseTable.isPublished
+	CourseTable.progress
+	CourseTable.certificate
+	CourseTable.points
+	CourseTable.createdAt
+}
+type <ItemTagTable> {
+	ItemTagTable.tag
+	ItemTagTable.type
+	ItemTagTable.createdAt
+}
+type <LeaderBoardResponse> {
+	LeaderBoardResponse.daily
+	LeaderBoardResponse.weekly
+	LeaderBoardResponse.monthly
+}
+type <MessageResponse> {
+	MessageResponse.pageInfo
+	MessageResponse.data
+}
+type <MessageTable> {
+	MessageTable.dbId
+	MessageTable.text
+	MessageTable.type
+	MessageTable.roomId
+	MessageTable.room
+	MessageTable.userId
+	MessageTable.createdBy
+	MessageTable.createdAt
+	MessageTable.updatedAt
+}
+type <Moderation> {
+	Moderation.moderationTask
+	Moderation.moderationTime
+	Moderation.moderator
+	Moderation.moderatorId
+}
+type <ModerationResponse> {
+	ModerationResponse.pageInfo
+	ModerationResponse.data
+}
+type <ModuleProgress> {
+	ModuleProgress.user
+	ModuleProgress.module
+	ModuleProgress.status
+	ModuleProgress.userId
+	ModuleProgress.moduleId
+	ModuleProgress.statusVal
+	ModuleProgress.createdAt
+}
+type <ModuleTable> {
+	ModuleTable.title
+	ModuleTable.sectionTopics
+	ModuleTable.moduleOrder
+	ModuleTable.userId
+	ModuleTable.user
+	ModuleTable.subject
+	ModuleTable.reviewId
+	ModuleTable.reviewer
+	ModuleTable.isPublished
+	ModuleTable.course
+	ModuleTable.progress
+	ModuleTable.createdAt
+}
+type <NotificationResponse> {
+	NotificationResponse.pageInfo
+	NotificationResponse.data
+}
+type <NotificationTable> {
+	NotificationTable.dbId
+	NotificationTable.label
+	NotificationTable.type
+	NotificationTable.causer
+	NotificationTable.storeId
+	NotificationTable.isSeen
+	NotificationTable.causerId
+	NotificationTable.userId
+	NotificationTable.createdAt
+	NotificationTable.updatedAt
+}
+type <QuestionCommentResponse> {
+	QuestionCommentResponse.pageInfo
+	QuestionCommentResponse.data
+}
+type <QuestionCommentTable> {
+	QuestionCommentTable.dbId
+	QuestionCommentTable.userId
+	QuestionCommentTable.user
+	QuestionCommentTable.comment
+	QuestionCommentTable.questionId
+	QuestionCommentTable.question
+	QuestionCommentTable.time
+}
+type <QuestionResponse> {
+	QuestionResponse.pageInfo
+	QuestionResponse.data
+}
+type <QuestionTable> {
+	QuestionTable.dbId
+	QuestionTable.votes
+	QuestionTable.counter
+	QuestionTable.questionTag
+	QuestionTable.tags
+	QuestionTable.questionTime
+	QuestionTable.userQuestion
+	QuestionTable.editorQuestion
+	QuestionTable.userId
+	QuestionTable.user
+	QuestionTable.point
+	QuestionTable.imgLink
+	QuestionTable.questionId
+	QuestionTable.answersIds
+	QuestionTable.answersList
+	QuestionTable.voterListIds
+	QuestionTable.voterList
+	QuestionTable.commentIds
+	QuestionTable.isDeleted
+	QuestionTable.points
+	QuestionTable.commentList
+	QuestionTable.moderation
+	QuestionTable.isReported
+	QuestionTable.isModeration
+	QuestionTable.isAnswered2
+	QuestionTable.isTopQuestion
+}
+type <QuizQuestionTable> {
+	QuizQuestionTable.dbId
+	QuizQuestionTable.randomVal
+	QuizQuestionTable.question
+	QuizQuestionTable.incorrectAnswers
+	QuizQuestionTable.type
+	QuizQuestionTable.questionId
+	QuizQuestionTable.difficulty
+	QuizQuestionTable.correctAnswer
+	QuizQuestionTable.category
+	QuizQuestionTable.createdById
+	QuizQuestionTable.reviewedById
+	QuizQuestionTable.createdBy
+	QuizQuestionTable.reviewedBy
+	QuizQuestionTable.upVoted
+	QuizQuestionTable.isActive
+	QuizQuestionTable.date
+}
+type <RoomResponse> {
+	RoomResponse.pageInfo
+	RoomResponse.data
+}
+type <RoomTable> {
+	RoomTable.dbId
+	RoomTable.title
+	RoomTable.imageLink
+	RoomTable.userIds
+	RoomTable.users
+	RoomTable.isFixed
+	RoomTable.messages
+	RoomTable.createdAt
+	RoomTable.updatedAt
+}
+type <Score> {
+	Score.date
+	Score.user
+	Score.answer
+	Score.sectionNotes
+	Score.question
+	Score.fight
+	Score.score
+}
+type <SectionQuestionTable> {
+	SectionQuestionTable.question
+	SectionQuestionTable.questionType
+	SectionQuestionTable.options
+	SectionQuestionTable.correctAnswer
+	SectionQuestionTable.user
+	SectionQuestionTable.userId
+	SectionQuestionTable.sectionTopic
+	SectionQuestionTable.createdAt
+}
+type <SectionTable> {
+	SectionTable.userId
+	SectionTable.user
+	SectionTable.subject
+	SectionTable.sectionQuiz
+	SectionTable.tags
+	SectionTable.votes
+	SectionTable.bookmarkList
+	SectionTable.voterList
+	SectionTable.title
+	SectionTable.content
+	SectionTable.editorContent
+	SectionTable.imageLink
+	SectionTable.reviewId
+	SectionTable.reviewer
+	SectionTable.isPublished
+	SectionTable.isUtham
+	SectionTable.views
+	SectionTable.sectionTopic
+	SectionTable.createdAt
+}
+type <SectionTopicProgress> {
+	SectionTopicProgress.user
+	SectionTopicProgress.sectionTopic
+	SectionTopicProgress.status
+	SectionTopicProgress.userId
+	SectionTopicProgress.sectionTopicId
+	SectionTopicProgress.createdAt
+}
+type <SectionTopicTable> {
+	SectionTopicTable.topic
+	SectionTopicTable.sections
+	SectionTopicTable.mainSection
+	SectionTopicTable.quizQuestions
+	SectionTopicTable.sectionOrder
+	SectionTopicTable.userId
+	SectionTopicTable.user
+	SectionTopicTable.subject
+	SectionTopicTable.reviewId
+	SectionTopicTable.reviewer
+	SectionTopicTable.moduleTable
+	SectionTopicTable.isPublished
+	SectionTopicTable.isReadyForReview
+	SectionTopicTable.editPermissionTime
+	SectionTopicTable.isTopNote
+	SectionTopicTable.reviewPoints
+	SectionTopicTable.progress
+	SectionTopicTable.createdAt
+}
+type <TypeResponse> {
+	TypeResponse.total
+	TypeResponse.currentPage
+	TypeResponse.last
+}
+type <UserFollowResponse> {
+	UserFollowResponse.pageInfo
+	UserFollowResponse.data
+}
+type <UserTable> {
+	UserTable.dbId
+	UserTable.answerIds
+	UserTable.followersIds
+	UserTable.followingIds
+	UserTable.imageLink
+	UserTable.isBan
+	UserTable.isModeration
+	UserTable.userId
+	UserTable.userName
+	UserTable.userEmail
+	UserTable.priority
+	UserTable.points
+	UserTable.isReported
+	UserTable.isSeen
+	UserTable.isOnline
+	UserTable.ranks
+	UserTable.createdAt
+	UserTable.updatedAt
+	UserTable.bookmarkCourse
+	UserTable.bookmarkSectionNotes
+	UserTable.myCourse
+	UserTable.mySectionNotes
+	UserTable.myModules
+	UserTable.myCertificate
+	UserTable.banTime
+	UserTable.banOrder
+	UserTable.deviceId
+	UserTable.isDeleted
+	UserTable.isFake
+	UserTable.randomVal
+	UserTable.lat
+	UserTable.lon
+	UserTable.country
+	UserTable.isAds
+	UserTable.isComment
+	UserTable.isChat
+	UserTable.block
+	UserTable.moderation
+	UserTable.totalPoints
+	UserTable.answers
+	UserTable.answersList
+	UserTable.activityList
+	UserTable.bio
+	UserTable.followers
+	UserTable.following
+	UserTable.followingList
+	UserTable.followersList
+}
+type <answerModerated> {
+	answerModerated.isModeration
+}
+type <dgraph.graphql> {
+	dgraph.graphql.schema
+	dgraph.graphql.xid
+}
+type <dgraph.graphql.persisted_query> {
+	dgraph.graphql.p_query
+}
+type <questionModerated> {
+	questionModerated.isModeration
+}
+type <userModerated> {
+	userModerated.isModeration
+}
